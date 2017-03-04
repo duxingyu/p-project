@@ -1,0 +1,350 @@
+/*顶部导航栏，主logo及搜索部分：.g-hd*/
+
+.g-hd {
+  height: 138px;
+  background: #fff;
+  .g-hd-wrap {
+    @include wh(100%,36px);
+    background: #f5f5f5;
+    border-bottom: 1px solid #eee;
+  }
+  .m-nav {
+    position: relative;
+    @include wh(990px,35px);
+    margin: 0 auto;
+    background: #f5f5f5;
+    font-family: 宋体;
+  }
+}
+
+.m-nav {
+  .m-nav-left {
+    float: left;
+  }
+  .m-nav-right {
+    float: right;
+    .m-nav-right1 {
+      float: left;
+      width: 80px;
+      padding-right: 4px;
+      &:hover .m-snav {
+        background: #eee;
+      }
+    }
+    .m-nav-right2 {
+      float: left;
+    }
+  }
+}
+// 网站导航
+.m-snav1 {
+  .wrap {
+    width: 988px;
+    padding: 20px 0;
+  }
+  .list {
+    dl {
+      @include wh(197px,240px);
+      padding-left: 20px;
+      float: left;
+      border-right: 1px solid #ddd;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    dt {
+      font-size: 14px;
+      height: 25px;
+      line-height: 17px;
+    }
+    p {
+      float: left;
+      width: 78px;
+      @include hl(25px);
+    }
+  }
+  &:hover .list {
+    height: 282px;
+  }
+}
+
+// 商家入驻
+.m-snav2 {
+  .wrap {
+    width: 164px;
+    padding: 5px 0;
+  }
+  &:hover .list {
+    height: 106px;
+  }
+}
+
+// 登陆注册
+.m-snav3, .m-snav4 {
+  > a {
+    padding: 0 4px 0 10px;
+  }
+}
+
+// 我的订单
+.m-snav5 {
+  .wrap {
+    width: 81px;
+  }
+  &:hover .list {
+    height: 120px;
+  }
+}
+
+// 我的易购
+.m-snav6 {
+  .wrap {
+    width: 162px;
+    padding-bottom: 5px;
+  }
+  &:hover .list {
+    height: 167px;
+  }
+  .vip {
+    display: inline-block;
+    @include wh(14px);
+    @include icons(-60px,-193px);
+    vertical-align: text-bottom;
+  }
+}
+
+.m-log {
+  @include wh(162px,66px);
+  margin: 5px 10px;
+  .userhead {
+    float: left;
+    img {
+      @include wh(56px);
+    }
+  }
+  .con {
+    @include wh(82px,56px);
+    float: left;
+    a {
+      display: block;
+      width: 62px;
+      margin-left: 20px;
+      float: left;
+    }
+    .log {
+      @include hl(28px);
+    }
+    .card {
+      @include hl(22px);
+      background: #f60;
+      text-align: center;
+      color: #fff;
+      border-radius: 4px;
+    }
+  }
+}
+
+// 购物车
+.m-snav7 {
+  a {
+    padding-right: 16px;
+  }
+  span::before {
+    content: "";
+    display: inline-block;
+    @include wh(16px,14px);
+    margin-right: 6px;
+    @include icons(0,-193px);
+    vertical-align: text-bottom;
+  }
+  i {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 16px;
+    @include hl(16px);
+    color: #fff;
+    &::after {
+      content: "0";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include wh(16px);
+      text-align: center;
+      background: #f7a705;
+      border-radius: 50%;
+    }
+  }
+}
+
+// 手机苏宁
+.m-snav8 span::before {
+  content: "";
+  display: inline-block;
+  @include wh(12px,16px);
+  margin-right: 6px;
+  @include icons(-20px,-193px);
+  vertical-align: text-bottom;
+}
+
+// 客户服务
+.m-snav11 {
+  .wrap {
+    width: 172px;
+    padding: 5px 0;
+  }
+  .list {
+    left: -91px;
+  }
+  em {
+    display: inline-block;
+    @include wh(15px);
+    @include icons(-80px,-193px);
+    vertical-align: text-bottom;
+  }
+  &:hover .list {
+    height: 100px;
+  }
+}
+
+// 右上方活动按钮
+#active-btn {
+  position: absolute;
+  top: 3px;
+  right: -56px;
+  @include wh(15px);
+  @include icons(-106px,-160px);
+  display: block;
+  &:hover {
+    background-position: -121px -160px;
+  }
+}
+
+// 主logo及搜索部分
+.g-hd-bd {
+  position: relative;
+  @include wh(990px,100px);
+  margin: 0 auto;
+}
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/**
+ * 右边搜索部分：.m-sch
+ * 搜索输入框部分：.ipt
+ * 搜索按钮：.btn
+ * 搜索框下的关键词列表：.list-key
+ */
+
+.m-sch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include wh(550px,100px);
+  .wrap {
+    position: relative;
+    height: 40px;
+    margin-top: 30px;
+  }
+  .icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    @include wh(16px);
+    @include icons(-130px, -193px);
+  }
+  .ipt {
+    position: relative;
+    @include wh(450px,40px);
+    line-height: 18px;
+    padding: 9px 10px 9px 0;
+    outline: none;
+    background: #fff;
+    border: 2px solid #ffc001;
+    text-indent: 30px;
+    &:focus ~ .m-schbox {
+      display: block;
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    @include wh(100px,40px);
+    font: bold 16px/36px 黑体;
+    text-align: center;
+    border: 2px solid #ffc001;
+    background: #ffc001;
+  }
+  .list-key {
+    width: 550px;
+    @include hl(18px);
+    margin-top: 5px;
+    overflow: hidden;
+    a {
+      float: left;
+      padding-right: 10px;
+      color: #999;
+      @include ahover;
+    }
+  }
+}
+.m-schbox {
+  position: absolute;
+  top: 41px;
+  right: 0;
+  @include wh(550px,271px);
+  border: 1px solid #e4e4e4;
+  background: #fff;
+  z-index: 1;
+  display: none;
+  .his {
+    @include wh(278px,271px);
+    border-right: 1px solid #efefef;
+    float: left;
+    .title {
+      height: 40px;
+      line-height: 28px;
+      padding-left: 12px;
+      background: #eee;
+      color: #9e9e9e;
+    }
+    .list {
+      margin: 40px 58px;
+    }
+  }
+  .hot {
+    float: left;
+    @include wh(270px,269px);
+    .title {
+      position: relative;
+      @include wh(270px,26px);
+      line-height: 26px;
+      padding-left: 15px;
+      margin-bottom: 7px;
+      color: #999;
+    }
+    dd {
+      float: left;
+      margin: 0 0 15px 15px;
+      a {
+        display: block;
+        height: 26px;
+        padding: 0 5px;
+        line-height: 24px;
+        border: 1px solid #e1e1e1;
+        color: #747474;
+        background: #fff;
+        &:hover {
+          background: #f60;
+          color: #fff;
+          border-color: #f60;
+        }
+      }
+    }
+  }
+}

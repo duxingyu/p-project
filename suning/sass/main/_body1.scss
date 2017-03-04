@@ -1,0 +1,218 @@
+// 全部商品分类、大屏广告及周边区域
+$bgcolor: #f6f7f8;
+.g-bd1 {
+  position: relative;
+  @include wh(100%,493px);
+  padding-top: 36px;
+  @include buffer(#fff);
+  .g-wrap1 {
+    position: relative;
+    @include wh(100%,459px);
+    border-top: 2px solid #000;
+    background: $bgcolor;
+  }
+  .g-wrap2 {
+    position: relative;
+    @include wh(990px,455px);
+    margin: 0 auto;
+  }
+}
+
+// 全部商品分类
+.m-goods {
+  position: absolute;
+  top: -38px;
+  left: 0;
+  @include wh(190px,493px);
+  .title {
+    width: 190px;
+    @include hl(36px);
+    font-size: 14px;
+    text-align: center;
+    background: #ffc001;
+  }
+  .sort {
+    border-top: 2px solid #e9e9e9;
+    background: #f4f4f4;
+    box-shadow: 0 1px 1px 1px #eee;
+    li {
+      @include wh(190px,35px);
+    }
+    a {
+      float: left;
+      @include hl(35px);
+      margin-left: 7px;
+      font-size: 13px;
+    }
+    span {
+      float: right;
+      @include wh(10px);
+      border: 5px solid transparent;
+      margin: 12px 12px 0 0;
+    }
+    li.crt {
+      background: #f8484a;
+      a {
+        color: #fff;
+      }
+      span {
+        border-left: 5px solid #fff;
+      }
+    }
+  }
+}
+// 具体商品分类
+.m-menu {
+  position: absolute;
+  top: 36px;
+  left: 190px;
+  z-index: 10;
+  visibility: hidden;
+  width: 802px;
+  min-height: 451px;
+  border: 2px solid #fa4b4b;
+  background: #fff;
+  .list-btn {
+    @include wh(475px,24px);
+    margin: 10px 0 2px 8px;
+    overflow: hidden;
+    li {
+      float: left;
+      padding-left: 25px;
+    }
+    a {
+      display: block;
+      @include hl(24px);
+      padding: 0 10px;
+      text-align: center;
+      border-radius: 10px;
+      color: #fff;
+      background: #fa4c4c;
+    }
+  }
+  .list-cate {
+    width: 444px;
+    margin: 0 0 8px 30px;
+    dl {
+      position: relative;
+      width: 444px;
+      padding-top: 12px;
+    }
+    dt {
+      float: left;
+      width: 84px;
+      a {
+        font-weight: 700;
+      }
+    }
+    a {
+      line-height: 21px;
+      @include ahover;
+    }
+    dd {
+      float: left;
+      width: 360px;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #eee;
+      a {
+        float: left;
+        padding-right: 14px;
+        color: #6f6a66;
+      }
+    }
+    .orange {
+      color: #f60;
+    }
+  }
+  .list-ad1 {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    @include wh(256px,165px);
+    width: 256px;
+    height: 165px;
+    a {
+      float: left;
+      @include wh(128px,55px);
+      padding: 0 5px 5px 0;
+    }
+    img {
+      @include wh(123px,50px);
+    }
+  }
+  .list-ad2 {
+    position: absolute;
+    top: 192px;
+    right: 10px;
+    a {
+      display: block;
+      @include wh(251px,125px);
+      padding-bottom: 5px;
+    }
+    img {
+      @include wh(251px,120px);
+    }
+  }
+}
+// 横行导航
+.m-col {
+  position: absolute;
+  top: -38px;
+  left: 190px;
+  @include wh(795px,36px);
+  li {
+    float: left;
+    padding: 0 12px 0 13px;
+    a {
+      @include hl(36px);
+      font-size: 15px;
+      @include ahover;
+    }
+  }
+}
+// 大屏轮播
+.m-sldl {
+  $height: 455px;
+  $width: 770px;
+  position: absolute;
+  top: 0;
+  left: 190px;
+  .list {
+    @include wh($width,$height);
+    overflow: hidden;
+    li {
+      float: left;
+    }
+    img {
+      @include wh($width,$height);
+    }
+  }
+  .u-arrow {
+    $left: 10px;
+    top: (($height - 78px) / 2);
+    left: $left;
+    width: $width - ($left * 2);
+  }
+  &:hover .u-arrow {
+    display: block;
+  }
+  .pag {
+    position: absolute;
+    top: 425px;
+    left: 325px;
+    a {
+      float: left;
+      @include wh(20px);
+      margin-right: 8px;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      background: #000;
+    }
+    .crt {
+      background: #f60;
+    }
+  }
+}

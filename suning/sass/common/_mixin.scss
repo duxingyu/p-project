@@ -1,0 +1,37 @@
+@mixin ahover($color: #f60) {
+  &:hover {
+    color: $color;
+  }
+}
+@mixin hl($height) {
+  height: $height;
+  line-height: $height;
+}
+@mixin wh($width,$height: false) {
+  width: $width;
+  @if $height {
+    height: $height;
+  } @else {
+    height: $width;
+  }
+}
+@mixin icons($top,$left) {
+  background: url(../img/suning/icons.png) $top $left;
+}
+@mixin buffer($color: #f6f7f8) {
+  background: $color url(../img/suning/floor-bg-new.gif) 50% 50% no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
