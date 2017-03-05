@@ -1,4 +1,4 @@
-// 全部商品分类、大屏广告及周边区域
+/* 全部商品分类、大屏广告及周边区域 */
 $bgcolor: #f6f7f8;
 .g-bd1 {
   position: relative;
@@ -216,3 +216,136 @@ $bgcolor: #f6f7f8;
     }
   }
 }
+// 侧边栏信息
+.m-info {
+  $border: 1px solid #f6f7f8;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: -18px;
+  @include wh(218px,30px);
+  background: #fff;
+  .tlist, .quicknav, .app {
+    display: none;
+  }
+  .tab {
+    margin-top: 6px;
+    @include wh(100%,24px);
+    li {
+      float: left;
+      @include hl(24px);
+      width: 32px;
+      margin: 0 20px;
+      text-align: center;
+      cursor: pointer;
+      @include ahover;
+    }
+  }
+  .tlist {
+    @include wh(100%, 132px);
+    border-top: $border;
+    padding: 12px 0 4px 0;
+    ul {
+      display: none;
+      li {
+        @include wh(100%,29px);
+        line-height: 29px;
+        padding-left: 20px;
+        a {
+          @include ahover;
+        }
+      }
+      &.crt {
+        display: block;
+      }
+    }
+  }
+  .quicknav {
+    @include wh(219px,186px);
+    border-top: $border;
+    border-bottom: $border;
+    background: #fff;
+    overflow: hidden;
+    li {
+      position: relative;
+      float: left;
+      @include wh(73px,61px);
+      border-top: $border;
+      border-right: $border;
+      .icon {
+        position: absolute;
+        top: 9px;
+        left: 27px;
+        @include wh(18px,23px);
+        @include icons(-150px,-193px);
+      }
+      .desc {
+        position: absolute;
+        top: 38px;
+        left: 0;
+        @include wh(100%,12px);
+        text-align: center;
+      }
+    }
+  }
+  .app {
+    @include wh(100%,84px);
+    padding: 13px 0 0 16px;
+    border-top: $border;
+    .title {
+      @include wh(100%, 28px);
+      font: bold 12px/28px $ff;
+    }
+    .list {
+      @include wh(100%,32px);
+      li {
+        float: left;
+        @include wh(32px);
+        margin-right: 15px;
+        span {
+          display: block;
+          @include wh(32px);
+          @include icons(-169px,-38px);
+        }
+      }
+    }
+  }
+  .control {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    @include wh(100%,24px);
+    background: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-top: $border;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      @include wh(11px);
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      transform-origin: 75% 75%;
+      transform: rotate(45deg);
+    }
+  }
+  &.show {
+    height: 431px;
+    .tlist, .quicknav, .app {
+      display: block;
+    }
+    .tab .show {
+      border-bottom: 2px solid #f60;
+      font-weight: 700;
+    }
+    .control span {
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+
+
+
+
+

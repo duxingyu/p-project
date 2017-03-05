@@ -1,0 +1,354 @@
+// F1 ~ F12 列表
+.g-bd3 {
+  width: 990px;
+  margin: 0 auto;
+}
+.m-floor {
+  @include wh(990px, 624px);
+  margin-top: 40px;
+  @include buffer;
+  .head {
+    width: 990px;
+    .title {
+      float: left;
+      @include wh(190px, 34px);
+      h3 {
+        height: 34px;
+        margin-top: -6px;
+        font: bold 20px/34px "Microsoft Yahei";
+      }
+    }
+  }
+}
+// 右边选项卡切换
+.m-ftab {
+  float: right;
+  @include wh(380px, 34px);
+  li {
+    position: relative;
+    float: left;
+    @include wh(56px, 34px);
+    margin: 6px 0 0 20px;
+    a {
+      font: 14px/34px "Microsft Yahei";
+      color: #666;
+    }
+    span {
+      position: absolute;
+      top: 25px;
+      left: 15px;
+      @include wh(0);
+      border-width: 0 11px 9px 11px;
+      border-color: transparent;
+      border-style: solid;
+      border-bottom-color: #783e18;
+      display: none;
+    }
+    &.on {
+      a {
+        color: #783e18;
+        font-weight: 700;
+      }
+      span {
+        display: block;
+      }
+    }
+  }
+}
+// 主体
+.m-fmain {
+  @include wh(990px, 590px);
+}
+// 左方广告
+.m-fad {
+  position: relative;
+  float: left;
+  @include wh(389px, 590px);
+  overflow: hidden;
+  .mimg {
+    position: relative;
+    display: block;
+    @include wh(383px, 319px);
+    padding: 16px 0 0 20px;
+    p {
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+      &.desc1 {
+        @include hl(40px);
+        font-size: 20px;
+      }
+      &.desc2 {
+        @include hl(16px);
+        font-size: 16px;
+      }
+    }
+    img {
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      @include wh(250px);
+    }
+    span {
+      position: absolute;
+      top: 0;
+      right: -6px;
+      @include wh(0);
+      border-width: 3px;
+      border-style: solid;
+    }
+  }
+  .entrances {
+    position: relative;
+    z-index: 10;
+    margin-top: -47px;
+    background: rgba(255, 255, 255, 0.6);
+    li {
+      float: left;
+      @include wh(127px, 47px);
+      padding: 7px 0;
+    }
+    a {
+      display: block;
+      @include wh(85px, 33px);
+      margin: 0 21px;
+      line-height: 33px;
+    }
+    i {
+      float: left;
+      @include wh(20px, 21px);
+      margin: 5px 10px 0 0;
+      @include icons(-100px, -193px);
+    }
+  }
+  .list {
+    @include wh(384px, 125px);
+    background: #fff;
+    .item {
+      float: left;
+      @include wh(128px, 100px);
+      margin: 12px 18px;
+      a {
+        float: left;
+        width: 64px;
+        @include hl(25px);
+        color: #666;
+        @include ahover;
+      }
+    }
+    .item-r {
+      margin-left: 72px;
+    }
+  }
+  .last-img {
+    position: relative;
+    @include wh(383px, 146px);
+    border-top: 1px solid #f6f7f8;
+    background: #fff;
+    a {
+      display: block;
+      @include wh(383px, 145px);
+    }
+    p {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      &.desc1 {
+        @include wh(180px, 28px);
+        margin: 15px 0 0 16px;
+        font: 18px/28px $ff;
+        color: #222;
+      }
+      &.desc2 {
+        @include wh(280px, 16px);
+        margin-left: 16px;
+        font: 14px/16px $ff;
+        color: #f15453;
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      @include wh(145px);
+    }
+  }
+}
+// 右方
+.main-cont {
+  position: relative;
+  float: left;
+  @include wh(607px, 584px);
+  margin: 6px 0 0 -6px;
+  border: 1px solid #f6f7f8;
+  overflow: hidden;
+  background: #fff;
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh(407px, 293px);
+    border-bottom: 1px solid #f6f7f8;
+  }
+  p.title {
+    position: relative;
+    @include wh(180px, 28px);
+    margin: 15px 0 0 16px;
+    font: 18px/28px $ff;
+    z-index: 1;
+    overflow: hidden;
+  }
+  p.desc {
+    @include wh(280px, 16px);
+    margin-left: 16px;
+    font: 14px/16px $ff;
+  }
+  .slider01 {
+    position: relative;
+    @include wh(405px, 291px);
+    li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include wh(100%);
+      background: #fff;
+      border-bottom: 1px solid #f6f7f8;
+      overflow: hidden;
+      z-index: 2;
+    }
+    a {
+      position: absolute;
+      @include wh(100%);
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      @include wh(230px);
+    }
+  }
+  &:hover .angle-btn {
+    display: block;
+    opacity: 1;
+  }
+  .angle-btn {
+    position: absolute;
+    top: 50%;
+    display: none;
+    @include wh(38px,78px);
+    z-index: 3;
+    opacity: 0.6;
+    &.prev-btn {
+      left: 50%;
+      margin-left: -201px;
+      @include icons(0,-51px);
+    }
+    &.next-btn {
+      right: 50%;
+      margin-right: -203px;
+      @include icons(-42px,-51px);
+    }
+  }
+  %col {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    li {
+      position: relative;
+      float: left;
+      @include wh(100%,50%);
+      border-bottom: 1px solid #f6f7f8;
+      background: #fff;
+      overflow: hidden;
+    }
+    a {
+      position: absolute;
+      @include wh(100%,100%);
+    }
+    img {
+      position: absolute;
+    }
+  }
+  .col1 {
+    @extend %col;
+    top: 292px;
+    @include wh(405px,292px);
+    img {
+      bottom: 0;
+      right: 10px;
+      @include wh(145px);
+    }
+  }
+  .col2 {
+    @extend %col;
+    @include wh(200px,583px);
+    li {
+      border-left: 1px solid #f6f7f8;
+    }
+    img {
+      bottom: 10px;
+      left: 5px;
+      @include wh(190px);
+    }
+  }
+}
+.m-floor1 {
+  @include floor(#f15453, #ffe2ec, #d18592);
+}
+
+// 为您推荐
+
+.m-recommand {
+  width: 990px;
+  min-height: 897px;
+  overflow: hidden;
+  margin-top: 20px;
+  .title {
+    @include wh(100%，40px);
+    h3 {
+      font: bold 20px/40px "Microsoft Yahei";
+    }
+  }
+  .list {
+    width: 1190px;
+    li {
+      float: left;
+      @include wh(197px,281px);
+      margin: 1px 0 0 1px;
+      background: #fff;
+      > a {
+        position: relative;
+        @include wh(100%, 179px);
+        img {
+          @include wh(160px);
+          margin: 0 19px;
+        }
+      }
+      > p {
+        @include wh(160px,36px);
+        margin: 13px auto 0 auto;
+        overflow: hidden;
+        a {
+          line-height: 18px;
+        }
+      }
+      .price {
+        float: left;
+        margin: 13px 0 0 19px;
+        font: 20px/26px "arial";
+        color: #e12228;
+      }
+      .cuxiao {
+        float: left;
+        float: right;
+        width: 47px;
+        @include hl(18px);
+        margin: 18px 19px 0 0;
+        text-align: center;
+        background: #fa4b4b;
+        border-radius: 2px;
+        color: #fff;
+      }
+    }
+  }
+}

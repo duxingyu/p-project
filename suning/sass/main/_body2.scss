@@ -1,1 +1,324 @@
 // 主体第二部分，包括3大块
+// 1. 活动列表
+.m-active {
+  $height: 152px;
+  $width: 990px;
+  position: relative;
+  @include wh($width,$height);
+  margin: 20px auto;
+  overflow: hidden;
+  .list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3000px;
+    li {
+      float: left;
+      padding-right: 10px;
+    }
+    img {
+      @include wh(240px,$height);
+    }
+  }
+  .u-arrow {
+    top: (($height - 78px) / 2 );
+    width: $width;
+  }
+  &:hover .u-arrow {
+    display: block;
+  }
+}
+
+// 2. 放心去喜欢
+.m-feature {
+  @include wh(990px,430px);
+  margin: 20px auto 0 auto;
+  @include buffer;
+  .title {
+    @include wh(990px,40px);
+    h3 {
+      font: bold 20px/40px "Microsoft Yahei";
+    }
+  }
+}
+// 左边
+.feature-enter {
+  float: left;
+  @include wh(382px,378px);
+  margin-top: 10px;
+  background: url(../img/suning/like.png);
+  .content {
+    position: relative;
+    float: left;
+    margin: 10px 0 0 10px;
+    @include wh(361px,169px);
+    .enter-title {
+      @include wh(341px,30px);
+      margin: 5px 0 0 20px;
+      font: bold 20px/1.5 $ff;
+      color: #fff;
+    }
+    .s-title {
+      position: relative;
+      @include wh(90px,24px);
+      margin: 4px 0 0 20px;
+      color: #ed1a46;
+      text-align: center;
+      font: 14px/24px $ff;
+      background: #fff;
+      span {
+        position: absolute;
+        top: 0;
+        @include wh(11px,24px);
+        &.left {
+          left: -11px;
+          @include icons(-206px,0);
+        }
+        &.right {
+          right: -11px;
+          @include icons(-206px,-33px);
+        }
+      }
+    }
+    .enter-desc {
+      @include wh(120px,60px);
+      overflow: hidden;
+      margin: 3px 0 0 20px;
+      font: 14px/20px $ff;
+      color: #ffb6b6;
+    }
+    img {
+      position: absolute;
+      right: 40px;
+      top: 10px;
+      @include wh(150px);
+      transition: right 0.5s ease;
+      &:hover {
+        right: 50px;
+        transition: right 0.5s ease;
+      }
+    }
+  }
+}
+// 右边列表
+.feature-list {
+  float: left;
+  @include wh(608px,389px);
+  padding: 9px 0 0 9px;
+  overflow: hidden;
+  li {
+    position: relative;
+    float: left;
+    @include wh(198px,188px);
+    margin: 1px 0 0 1px;
+    background: #fff;
+    a {
+      position: relative;
+      float: left;
+      @include wh(200px,190px);
+      border: 1px solid #eee;
+      .name {
+        position: relative;
+        margin: 15px 0 0 16px;
+        font: bold 20px/1.5 $ff;
+      }
+      .desc {
+        position: relative;
+        margin-left: 16px;
+        font: 14px/18px $ff;
+        color: #999;
+        z-index: 1;
+      }
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include wh(128px);
+        transition: right 0.5s ease;
+      }
+      &:hover {
+        top: -2px;
+        left: -2px;
+        z-index: 1;
+        border: 2px solid #fa4b4b;
+      }
+    }
+    &:hover {
+      box-shadow: 0 2px 10px #999;
+      z-index: 1;
+      img {
+        right: 10px;
+        transition: right 0.5s ease;
+      }
+    }
+  }
+}
+// 3. 大牌盛宴，精选好货，精选清单
+
+.m-three {
+  @include wh(1006px,419px);
+  margin: 40px auto 20px auto;
+  @include buffer;
+  section {
+    float: left;
+    overflow: hidden;
+    background: #fff;
+    .title {
+      position: relative;
+      height: 52px;
+      color: #fff;
+      h3 {
+        float: left;
+        @include wh(80px,52px);
+        margin-left: 20px;
+        font: bold 20px/52px $ff;
+      }
+      .more {
+        float: left;
+        float: left;
+        @include wh(76px, 21px);
+        margin: 16px 0 0 200px;
+        color: #fff;
+        font: 14px/20px $ff;
+      }
+      span {
+        vertical-align: middle;
+        display: inline-block;
+      }
+      em {
+        display: inline-block;
+        @include wh(15px);
+        margin-left: 5px;
+        line-height: 20px;
+        vertical-align: middle;
+        @include icons(-150px,-159px);
+      }
+    }
+  }
+}
+%listd {
+  li {
+    position: relative;
+    float: left;
+    @include wh(184px,114px);
+    border-right: 1px solid #f6f7f8;
+    border-bottom: 1px solid #f6f7f8;
+    &:hover img {
+      right: 25px;
+      transition: right 0.5s ease;
+    }
+  }
+  p {
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    left: 10px;
+    width: 75px;
+    font: 15px/20px $ff;
+    @include ahover;
+  }
+  img {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    @include wh(80px);
+    transition: right 0.5s ease;
+  }
+}
+// 大牌盛宴
+.m-dpsy {
+  @include wh(204px,417px);
+  .title {
+    background: #419dae;
+  }
+  .ad {
+    display: block;
+    @include wh(184px,114px);
+    margin: 10px;
+    overflow: hidden;
+  }
+  .list {
+    @include wh(184px,220px);
+    margin: 0 10px;
+    @extend %listd;
+  }
+}
+
+// 精选好货
+.m-jxhh {
+  @include wh(387px,417px);
+  margin-left: 12px;
+  .title {
+    background: #867bc5;
+  }
+  .list {
+    @include wh(368px,355px);
+    margin: 10px 11px 11px 10px;
+    @extend %listd;
+  }
+}
+
+// 必抢清单
+.m-bqqd {
+  @include wh(388px, 417px);
+  margin-left: 12px;
+  .title {
+    background: #a25683;
+  }
+}
+
+// 3. 为您推荐
+.m-wntj {
+  @include wh(990px, 333px);
+  margin: 0 auto;
+  overflow: hidden;
+  .title {
+    height: 52px;
+    h3 {
+      float: left;
+      font: bold 20px/52px $ff;
+      height: 52px;
+    }
+    .more {
+      float: right;
+      font-size: 16px;
+      line-height: 64px;
+      @include ahover;
+    }
+  }
+  .list {
+    overflow: hidden;
+    @include wh(2000px,281px);
+  }
+  .item {
+    float: left;
+    @include wh(198px,281px);
+    border-right: 1px solid #f6f7f8;
+    background: #fff;
+    > a {
+      display: block;
+      @include wh(197px,193px);
+      img {
+        @include wh(160px);
+        margin: 19px 0 0 19px;
+      }
+    }
+    p {
+      @include wh(157px,36px);
+      margin: 0 22px 0 18px;
+      overflow: hidden;
+      a {
+        display: block;
+        line-height: 18px;
+        @include ahover;
+      }
+    }
+    span {
+      display: block;
+      height: 52px;
+      margin-left: 18px;
+      color: #e12228;
+      font: 20px/52px "arial";
+    }
+  }
+}

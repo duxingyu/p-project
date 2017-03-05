@@ -1,0 +1,195 @@
+// 底部
+.g-ft {
+  .g-wrap1 {
+    @include wh(100%,253px);
+    background: #f5f5f5;
+    border-top: 1px solid #e7e7e7;
+  }
+  .g-wrap2 {
+    @include wh(100%, 300px);
+    background: #33302b;
+  }
+}
+// 承诺保证：正品保证，极速物流。。
+.m-pro {
+  @include wh(990px,73px);
+  margin: 0 auto;
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
+  background: #f5f5f5;
+  .list {
+    width: 1050px;
+    .item {
+      position: relative;
+      float: left;
+      @include wh(210px,72px);
+      .icon {
+        @include wh(47px);
+        margin: 13px 9px 0 0;
+        background: url(../img/suning/npbg.png);
+      }
+      .con {
+        position: absolute;
+        top: 13px;
+        left: 56px;
+        @include wh(154px,48px);
+      }
+      .title {
+        display: block;
+        font: 13px/23px $ff;
+      }
+      .desc {
+        font: 12px/26px $ff;
+      }
+    }
+    .item1 {
+      background-position: -1px 0;
+    }
+    .item2 {
+      background-position: -1px -48px;
+    }
+    .item3 {
+      background-position: -1px -96px;
+    }
+    .item4 {
+      background-position: -1px -144px;
+    }
+    .item5 {
+      background-position: -1px -192px;
+    }
+  }
+}
+
+.m-helpnav {
+  @include wh(990px,180px);
+  margin: 0 auto;
+  .list {
+    @include wh(170px,180px);
+    float: left;
+    dt {
+      font: bold 13px/41px $ff;
+    }
+    dd {
+      @include hl(12px);
+      margin-bottom: 10px;
+      a {
+        color: #545454;
+        @include ahover;
+      }
+    }
+  }
+  .app {
+    width: 90px;
+  }
+}
+
+.m-ft1 {
+  @include wh(990px, 141px);
+  margin: 0 auto;
+  .list {
+    position: relative;
+    float: left;
+    height: 129px;
+    border-right: 1px dotted #444;
+    margin-top: 12px;
+    .icon {
+      @include wh(80px);
+      margin: 5px 20px 0 0;
+    }
+    .con {
+      color: #fff;
+      position: absolute;
+      top: 0;
+    }
+    .title {
+      height: 25px;
+      font: bold 14px/26px $ff;
+    }
+    .desc {
+      font: 12px/18px $ff;
+    }
+  }
+  .list1 {
+    width: 290px;
+    .con {
+      width: 170px;
+      left: 100px;
+    }
+  }
+  .list2 {
+    width: 310px;
+    .icon {
+      margin-left: 20px;
+    }
+    .con {
+      width: 170px;
+      left: 120px;
+    }
+  }
+  .list3 {
+    width: 390px;
+    border: none;
+    .icon {
+      @include wh(140px,94px);
+      background: url(../img/suning/npbg.png) 0 -49px;
+      margin-top: 3px;
+    }
+    .con {
+      width: 190px;
+      left: 140px;
+    }
+    .serach {
+      display: block;
+      @include wh(105px,25px);
+      margin-top: 5px;
+      background: url(../img/suning/npbg.png) -140px -49px;
+      &:hover {
+        background-position: -140px -74px;
+      }
+    }
+  }
+}
+
+// 版权信息等
+.m-ft2 {
+  @include wh(990px,159px);
+  margin: 0 auto;
+  .list {
+    li {
+      float: left;
+      @include hl(25px);
+      font: 12px/25px $ff;
+      a {
+        color: #f9f9f9;
+      }
+      span {
+        padding: 0 8px;
+        color: #888;
+      }
+    }
+  }
+  .copy {
+    color: #999;
+    @include hl(24px);
+    a {
+      color: #999;
+    }
+  }
+  .bimg {
+    @include wh(990px,28px);
+    margin-top: 5px;
+    a {
+      float: left;
+      margin-right: 8px;
+      @include wh(76px,28px);
+    }
+    img {
+      @include wh(76px,28px);
+    }
+  }
+}
+
+
+
+
+

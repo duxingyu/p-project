@@ -92,6 +92,10 @@
   @include wh(16px);
   background: url(../img/suning/npbg.png) 0 -205px;
 }
+// left默认为0
+// top: (($height - 78px) / 2);
+// width: $width - ($left * 2);
+// &hover .u-arrow display: block
 .u-arrow {
   position: absolute;
   height: 78px;
