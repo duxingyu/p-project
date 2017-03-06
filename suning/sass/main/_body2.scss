@@ -11,7 +11,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 3000px;
+    width: 4000px;
     li {
       float: left;
       padding-right: 10px;
@@ -20,11 +20,10 @@
       @include wh(240px,$height);
     }
   }
-  .u-arrow {
-    top: (($height - 78px) / 2 );
-    width: $width;
+  .angle-btn {
+    top: 37px;
   }
-  &:hover .u-arrow {
+  &:hover .angle-btn {
     display: block;
   }
 }
@@ -46,7 +45,7 @@
   float: left;
   @include wh(382px,378px);
   margin-top: 10px;
-  background: url(../img/suning/like.png);
+  background: url(../img/like.png);
   .content {
     position: relative;
     float: left;

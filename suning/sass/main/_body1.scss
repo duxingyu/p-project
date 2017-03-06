@@ -182,19 +182,22 @@ $bgcolor: #f6f7f8;
     @include wh($width,$height);
     overflow: hidden;
     li {
-      float: left;
+      display: none;
     }
     img {
       @include wh($width,$height);
     }
   }
-  .u-arrow {
-    $left: 10px;
-    top: (($height - 78px) / 2);
-    left: $left;
-    width: $width - ($left * 2);
+  .angle-btn {
+    top: 189px;
+    &.prev-btn {
+      left: 10px;
+    }
+    &.next-btn {
+      right: 10px;
+    }
   }
-  &:hover .u-arrow {
+  &:hover .angle-btn {
     display: block;
   }
   .pag {
@@ -300,6 +303,7 @@ $bgcolor: #f6f7f8;
       @include wh(100%,32px);
       li {
         float: left;
+        display: block;
         @include wh(32px);
         margin-right: 15px;
         span {
@@ -334,9 +338,14 @@ $bgcolor: #f6f7f8;
     .tlist, .quicknav, .app {
       display: block;
     }
-    .tab .show {
-      border-bottom: 2px solid #f60;
-      font-weight: 700;
+    .tab {
+      li:hover {
+        color: #333;
+      }
+      .show {
+        border-bottom: 2px solid #f60;
+        font-weight: 700;
+      }
     }
     .control span {
       transform: rotate(-135deg);

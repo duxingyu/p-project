@@ -1,13 +1,16 @@
 $ff: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
+
 @mixin ahover($color: #f60) {
   &:hover {
     color: $color;
   }
 }
+// 高和行高相等
 @mixin hl($height) {
   height: $height;
   line-height: $height;
 }
+// 设置宽高
 @mixin wh($width,$height: false) {
   width: $width;
   @if $height {
@@ -16,12 +19,15 @@ $ff: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
     height: $width;
   }
 }
+// 图标雪碧图
 @mixin icons($top,$left) {
-  background: url(../img/suning/icons.png) $top $left;
+  background: url(../img/icons.png) $top $left;
 }
+// loading
 @mixin buffer($color: #f6f7f8) {
-  background: $color url(../img/suning/floor-bg-new.gif) 50% 50% no-repeat;
+  background: $color url(../img/floor-bg-new.gif) 50% 50% no-repeat;
 }
+// F1~F12：1. 主体色，左上图片背景色，左上图片遮罩文字颜色
 @mixin floor($color,$bg,$color2) {
   .mimg {
     background: $bg;

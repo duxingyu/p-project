@@ -78,6 +78,7 @@
     }
   }
 }
+
 .u-close {
   position: absolute;
   cursor: pointer;
@@ -87,34 +88,34 @@
   @include wh(16px);
   @include ahover;
 }
+
 .u-hot {
   display: inline-block;
   @include wh(16px);
-  background: url(../img/suning/npbg.png) 0 -205px;
+  background: url(../img/npbg.png) 0 -205px;
 }
-// left默认为0
-// top: (($height - 78px) / 2);
-// width: $width - ($left * 2);
-// &hover .u-arrow display: block
-.u-arrow {
+
+// .angle-btn {
+//   top: ;
+//   &.prev-btn {left: ;}
+//   &.prev-btn {right: ;}
+// }
+// &:hover .angle-btn {display: block;}
+.angle-btn {
   position: absolute;
-  height: 78px;
   display: none;
-  left: 0;
-  a {
-    @include wh(38px,78px);
-    background-image: url(../img/suning/icons.png);
-    opacity: 0.6;
-  }
-  &:hover a {
+  @include wh(38px,78px);
+  z-index: 3;
+  opacity: 0.6;
+  &:hover {
     opacity: 1;
   }
-  .left {
-    float: left;
-    background-position: 0 -51px;
+  &.prev-btn {
+    left: 0;
+    @include icons(0,-51px);
   }
-  .right {
-    float: right;
-    background-position: -43px -51px;
+  &.next-btn {
+    right: 0;
+    @include icons(-42px,-51px);
   }
 }

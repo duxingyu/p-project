@@ -155,7 +155,7 @@
               <div class="list">
                 <div class="coma clearfix wrap">
                   <div class="m-log">
-                    <a href="#" class="userhead"><img src="./img/suning/userhead.jpg" alt="" id="userHead" /></a>
+                    <a href="#" class="userhead"><img src="./img/userhead.jpg" alt="" id="userHead" /></a>
                     <div class="con">
                       <a href="#" class="log">请登录</a>
                       <a href="#" class="card">点击打卡</a>
@@ -215,20 +215,20 @@
     </div>
     <!--主logo及搜索部分-->
     <div class="g-hd-bd">
-      <a href="#" id="logo"><img src="./img/suning/suning.png" alt="苏宁易购"></a>
+      <a href="#" id="logo"><img src="./img/suning.png" alt="苏宁易购"></a>
       <!--搜索部分-->
       <div class="m-sch">
         <div class="wrap">
           <span class="icon"></span>
           <input type="text" id="j-serachInp" class="ipt" placeholder="">
           <a href="#" class="btn">搜索</a>
-          <div class="m-schbox">
+          <div class="m-schbox" id="j-serachBox">
             <div class="his">
               <h3 class="title">最近搜索</h3>
               <div class="list"><img src="https://res.suning.cn/public/v3/css/images/search-express-none.png" alt=""></div>
             </div>
             <dl class="hot" id="j-serachHot">
-              <dt class="title"><span>正在热搜中</span><i class="u-close">×</i></dt>
+              <dt class="title"><span>正在热搜中</span><i class="u-close" id="j-closeBtn">×</i></dt>
             </dl>
           </div>
         </div>
@@ -236,10 +236,9 @@
       </div>
     </div>
   </header>
-  <script src="./js/suningtop.js"></script>
   <!--全部商品分类、大屏广告及周边区域-->
   <section class="g-bd1">
-    <div class="g-wrap1">
+    <div class="g-wrap1" id="j-adbg">
       <div class="g-wrap2">
         <!--全部商品分类-->
         <nav class="m-goods" id="j-sortAll">
@@ -353,31 +352,29 @@
         </nav>
         <!--大屏广告-->
         <section class="m-sldl clearfix">
-          <ul class="list clearfix">
-            <li>
-              <a href="#"><img src="./img/suning/cuxiao1.jpg" alt=""></a>
+          <ul class="list clearfix" id="j-sldl">
+            <li data-bg="#6441d9" class="crt">
+              <a href="#"><img src="https://image.suning.cn/uimg/aps/material/148852593455367291.jpg" alt=""></a>
             </li>
-            <li>
-              <a href="#"><img src="./img/suning/cuxiao1.jpg" alt=""></a>
+            <li data-bg="#201816">
+              <a href="#"><img src="https://image3.suning.cn/uimg/cms/img/148852997173668210.jpg" alt=""></a>
             </li>
-            <li>
-              <a href="#"><img src="./img/suning/cuxiao1.jpg" alt=""></a>
+            <li data-bg="#1133F6">
+              <a href="#"><img src="https://image1.suning.cn/uimg/cms/img/148852275482092459.jpg" alt=""></a>
             </li>
-            <li>
-              <a href="#"><img src="./img/suning/cuxiao1.jpg" alt=""></a>
+            <li data-bg="#81C9B1">
+              <a href="#"><img src="http://image.suning.cn/uimg/aps/material/148852892608657485.jpg" alt=""></a>
             </li>
-            <li>
-              <a href="#"><img src="./img/suning/cuxiao1.jpg" alt=""></a>
+            <li data-bg="#06070B">
+              <a href="#"><img src="http://image1.suning.cn/uimg/cms/img/148853211548311182.jpg" alt=""></a>
             </li>
-            <li>
-              <a href="#"><img src="./img/suning/cuxiao1.jpg" alt=""></a>
+            <li data-bg="#FF3366">
+              <a href="#"><img src="http://image3.suning.cn/uimg/cms/img/148852800882021534.jpg" alt=""></a>
             </li>
           </ul>
-          <div class="u-arrow">
-            <a href="javascript:void(0);" class="left"><span></span></a>
-            <a href="javascript:void(0);" class="right"><span></span></a>
-          </div>
-          <div class="pag clearfix">
+          <a href="javascript:void(0);" class="angle-btn prev-btn"><i></i></a>
+          <a href="javascript:void(0);" class="angle-btn next-btn"><i></i></a>
+          <div class="pag clearfix" id="j-spag">
             <a href="javascript:void(0);" class="crt">1</a>
             <a href="javascript:void(0);">2</a>
             <a href="javascript:void(0);">3</a>
@@ -387,7 +384,7 @@
           </div>
           <!--侧边栏信息-->
           <aside class="m-info">
-            <ul class="tab clearfix">
+            <ul class="tab clearfix" id="j-asideTab">
               <li class="show">头条</li>
               <li>公告</li>
               <li>足球</li>
@@ -444,56 +441,55 @@
                 </li>
               </ul>
             </div>
-            <div class="control"><span></span></div>
+            <div class="control" id="j-asideInfo"><span></span></div>
           </aside>
         </section>
       </div>
     </div>
   </section>
+  <script src="./js/index1.js" defer></script>
   <section class="g-bd2">
     <section class="m-active">
-      <ul class="list">
+      <ul class="list" id="j-activeEnter" style="width: 4000px;">
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image5.suning.cn/uimg/cms/img/148852496190463886.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image1.suning.cn/uimg/cms/img/148859186162893851.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image3.suning.cn/uimg/cms/img/148853529513118584.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image3.suning.cn/uimg/cms/img/148852826441089815.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image1.suning.cn/uimg/cms/img/148853590997451427.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image5.suning.cn/uimg/cms/img/148852735561678150.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image3.suning.cn/uimg/cms/img/148853076159987958.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image4.suning.cn/uimg/cms/img/148853395017006366.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="https://image5.suning.cn/uimg/aps/kz/148852272818685113.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="http://image3.suning.cn/uimg/aps/kz/148852460746442876.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="http://image4.suning.cn/uimg/aps/material/148852453542528276.jpg" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./img/suning/activeenter.jpg" alt=""></a>
+          <a href="#"><img src="http://image3.suning.cn/uimg/cms/img/148855076772781351.jpg" alt=""></a>
         </li>
       </ul>
-      <div class="u-arrow">
-        <a href="javascript:void(0);" class="left"><span></span></a>
-        <a href="javascript:void(0);" class="right"><span></span></a>
-      </div>
+      <a href="javascript:void(0);" class="angle-btn prev-btn"><i></i></a>
+      <a href="javascript:void(0);" class="angle-btn next-btn"><i></i></a>
     </section>
     <section class="m-feature" id="j-homePage">
     </section>
@@ -610,7 +606,7 @@
           <a href="#" class="mimg">
             <p class="desc1">服饰百货闺蜜节</p>
             <p class="desc2">服饰9.9元起 更有买2付1</p>
-            <img src="./img/suning/third.jpg" alt="">
+            <img src="./img/third.jpg" alt="">
             <span></span>
           </a>
           <ul class="entrances clearfix">
@@ -644,7 +640,7 @@
             <a href="#">
               <p class="desc1">春季出游装备</p>
               <p class="desc2">满299减50</p>
-              <img src="./img/suning/third2.jpg" alt="">
+              <img src="./img/third2.jpg" alt="">
             </a>
           </div>
         </div>
@@ -822,7 +818,7 @@
       </section>
     </div>
   </footer>
-  <script src="./js/suning.js"></script>
+  <script src="./js/suning.js" defer></script>
 </body>
 
 </html>

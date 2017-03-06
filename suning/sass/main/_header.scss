@@ -266,9 +266,6 @@
     border: 2px solid #ffc001;
     font-size: 13px;
     text-indent: 30px;
-    &:focus ~ .m-schbox {
-      display: block;
-    }
   }
   .btn {
     position: absolute;

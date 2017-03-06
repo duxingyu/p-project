@@ -189,6 +189,12 @@
     left: 0;
     @include wh(407px, 293px);
     border-bottom: 1px solid #f6f7f8;
+    &:hover .angle-btn {
+      display: block;
+    }
+    .angle-btn {
+      top: 108px;
+    }
   }
   p.title {
     position: relative;
@@ -225,28 +231,6 @@
       bottom: 0;
       right: 10px;
       @include wh(230px);
-    }
-  }
-  &:hover .angle-btn {
-    display: block;
-    opacity: 1;
-  }
-  .angle-btn {
-    position: absolute;
-    top: 50%;
-    display: none;
-    @include wh(38px,78px);
-    z-index: 3;
-    opacity: 0.6;
-    &.prev-btn {
-      left: 50%;
-      margin-left: -201px;
-      @include icons(0,-51px);
-    }
-    &.next-btn {
-      right: 50%;
-      margin-right: -203px;
-      @include icons(-42px,-51px);
     }
   }
   %col {
