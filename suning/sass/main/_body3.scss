@@ -4,6 +4,7 @@
   margin: 0 auto;
 }
 .m-floor {
+  position: relative;
   @include wh(990px, 624px);
   margin-top: 40px;
   @include buffer;
@@ -22,7 +23,10 @@
 }
 // 右边选项卡切换
 .m-ftab {
-  float: right;
+  // float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   @include wh(380px, 34px);
   li {
     position: relative;
@@ -273,6 +277,43 @@
       bottom: 10px;
       left: 5px;
       @include wh(190px);
+    }
+  }
+  // 其余选项卡
+  .prd-list {
+    @include wh(792px,583px);
+    border-bottom: 1px solid #f6f7f8;
+    margin-left: 14px;
+    overflow: hidden;
+    li {
+      float: left;
+      @include wh(198px,292px);
+      border-bottom: 1px solid #f6f7f8;
+      border-left: 1px solid #f6f7f8;
+    }
+    .prd-img {
+      height: 202px;
+      padding-top: 22px;
+      img {
+        display: block;
+        @include wh(180px);
+        margin: 0 auto;
+      }
+    }
+    .name {
+      height: 35px;
+      padding: 3px 15px 0 12px;
+      overflow: hidden;
+      a {
+        line-height: 17px;
+        @include ahover;
+      }
+    }
+    .price {
+      height: 39px;
+      padding: 8px 15px 0 15px;
+      font-size: 20px;
+      color: #e12228;
     }
   }
 }

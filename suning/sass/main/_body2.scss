@@ -264,6 +264,57 @@
   .title {
     background: #a25683;
   }
+  .tab {
+    height: 32px;
+    li {
+      float: left;
+      @include wh(129px,32px);
+      text-align: center;
+      font-size: 16px;
+      line-height: 32px;
+      cursor: pointer;
+      span {
+        display: block;
+        @include wh(32px,32px);
+        margin: 0 auto;
+      }
+      &.crt span {
+        border-bottom: 2px solid #9a5d7f;
+      }
+    }
+  }
+  .list {
+    @include wh(368px,326px);
+    margin: 0 auto;
+    overflow: hidden;
+    ul {
+      display: none;
+      &.crt {
+        display: block;
+      }
+    }
+    li {
+      @include wh(388px,164px);
+      padding: 10px 0 10px 10px;
+      border-bottom: 1px solid #f6f7f8;
+      a {
+        display: block;
+        @include wh(100%,100%);
+      }
+      .desc {
+        @include wh(100%,28px);
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 28px;
+        @include ahover;
+      }
+      img {
+        float: left;
+        @include wh(100px);
+        margin: 15px 24px 0 0;
+      }
+    }
+  }
 }
 
 // 3. 为您推荐

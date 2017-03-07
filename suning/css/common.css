@@ -1,0 +1,187 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0; }
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th {
+  text-align: left;
+  font-weight: normal; }
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0; }
+
+i, cite, em, var, address, dfn {
+  font-style: normal; }
+
+[hidefocus], summary {
+  outline: 0; }
+
+li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%; }
+
+sup, sub {
+  font-size: 83%; }
+
+pre, code, kbd, samp {
+  font-family: inherit; }
+
+q:before, q:after {
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+label, summary {
+  cursor: default; }
+
+a, button {
+  cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold; }
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none; }
+
+body, textarea, input, button, select, keygen, legend {
+  font: 12px/1.14 arial,\5b8b\4f53;
+  color: #333;
+  outline: 0; }
+
+body {
+  background: #fff; }
+
+a, a:hover {
+  color: #333; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+/* 整体默认样式 */
+body {
+  min-width: 990px;
+  font-family: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
+  font-size: 12px;
+  color: #333;
+  background-color: #f6f7f8; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: " "; }
+
+/* 公共组件，模块部分 */
+.m-snav {
+  position: relative;
+  float: left;
+  background: #f5f5f5; }
+  .m-snav > a {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    color: #666;
+    height: 35px;
+    line-height: 35px; }
+    .m-snav > a:hover {
+      color: #f60; }
+  .m-snav .dislink:hover {
+    color: #666; }
+  .m-snav .drop {
+    border: 1px solid transparent; }
+    .m-snav .drop span::after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin: 0 0 2px 6px;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      transform-origin: 75% 75%;
+      border-right: 1px solid #c7c4ce;
+      border-bottom: 1px solid #c7c4ce; }
+  .m-snav .list {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 20;
+    height: 0;
+    transform: height 0.3s ease;
+    overflow: hidden;
+    background: #fff; }
+    .m-snav .list a {
+      color: #666; }
+      .m-snav .list a:hover {
+        color: #f60; }
+    .m-snav .list .coma > a {
+      float: left;
+      display: block;
+      width: 81px;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 10px; }
+  .m-snav:hover .drop {
+    z-index: 30;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-bottom-color: #fff;
+    background: #fff; }
+  .m-snav:hover span::after {
+    transform: rotate(-135deg);
+    transition: transform 0.3s ease; }
+  .m-snav:hover .list {
+    border: 1px solid #ddd;
+    transition: height 0.3s ease; }
+
+.u-close {
+  position: absolute;
+  cursor: pointer;
+  font-size: 27px;
+  top: 5px;
+  right: 15px;
+  width: 16px;
+  height: 16px; }
+  .u-close:hover {
+    color: #f60; }
+
+.u-hot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/npbg.png) 0 -205px; }
+
+.angle-btn {
+  position: absolute;
+  display: none;
+  width: 38px;
+  height: 78px;
+  z-index: 3;
+  opacity: 0.6; }
+  .angle-btn:hover {
+    opacity: 1; }
+  .angle-btn.prev-btn {
+    left: 0;
+    background: url(../img/icons.png) 0 -51px; }
+  .angle-btn.next-btn {
+    right: 0;
+    background: url(../img/icons.png) -42px -51px; }
