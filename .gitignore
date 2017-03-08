@@ -35,3 +35,16 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# VSCode配置文件
+.vscode
+jsconfig.json
+
+# 生产环境代码存储
+dist
+
+# 一些配置文件
+config
+
+# scss编译后产生的css文件及sourcemap文件
+*/css
