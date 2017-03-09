@@ -3,58 +3,45 @@
   const prev = activeEnter.nextElementSibling;
   const next = prev.nextElementSibling;
 
+  activeEnter.innerHTML += activeEnter.innerHTML;
+  activeEnter.style.width = parseInt(getComputedStyle(activeEnter).width) * 2 + 'px';
+
   // next/prev处理函数
-  function activeEnterMove(dir) {
+  function loop(dir) {
     let timer = null;
-
     return function() {
-
-      // 如果在定时器结束前再次点击，则返回
       if (timer != null) return;
-      let crtLeft = parseInt(getComputedStyle(activeEnter).left);
-      let li = activeEnter.children;
+      let v = dir === 'next' ? -100 : 100;
+      const nodeStyle = getComputedStyle(activeEnter);
+      let oL = parseInt(nodeStyle.left);
+      const oW = parseInt(nodeStyle.width);
+      let startDis;
 
-      // 根据next/prev及left值对临界条件进行处理
-      if (dir === 'next') {
-        if (crtLeft === -2000) {
-          [...li].forEach((v, i) => i < 4 && activeEnter.appendChild(v.cloneNode(true)));
-        }
-      } else {
-        if (crtLeft === 0) {
-          [...li].forEach((v, i) => i > 7 && activeEnter.insertBefore(v.cloneNode(true), activeEnter.children[i - 8]));
-          activeEnter.style.left = '-1000px';
-          crtLeft = -1000;
-        }
+      if (oL === 0) {
+        oL = -oW / 2;
+      } else if (oL === 1000 - oW) {
+        oL += oW / 2;
       }
+      startDis = oL;
+      activeEnter.style.left = oL + 'px';
 
-      let num = 0;
       timer = setInterval(() => {
-        // 当到达指定位置后对临界条件进行处理，同时清除定时器，timer设为null以便可以再次执行
-        if (num === 10) {
-          if (dir === 'next') {
-            if (crtLeft === -3000 && li.length > 12) {
-              activeEnter.style.left = 0;
-              [...li].forEach((v, i) => i > 11 && activeEnter.removeChild(v));
-            }
-          } else {
-            if (crtLeft === 0 && li.length > 12) {
-              [...li].forEach((v, i) => i < 4 && activeEnter.removeChild(v));
-              activeEnter.style.left = '-2000px';
-            }
-          }
+        // 当到达指定位置后，清除定时器，timer设为null以便可以再次执行
+        if (Math.abs(oL - startDis) === 1000) {
           clearInterval(timer);
           timer = null;
           return;
         }
-        dir === 'next' ? crtLeft -= 100 : crtLeft += 100;
-        activeEnter.style.left = crtLeft + 'px';
-        num++;
+        oL = oL + v;
+        activeEnter.style.left = oL + 'px';
       }, 20);
-    }
+    };
   }
+
+
   // 对prev/next绑定事件
-  prev.addEventListener('click', activeEnterMove());
-  next.addEventListener('click', activeEnterMove('next'));
+  prev.addEventListener('click', loop());
+  next.addEventListener('click', loop('next'));
 
   // 必抢清单
   const bqqd = getId('j-bqqd');
