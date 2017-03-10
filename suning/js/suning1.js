@@ -5,7 +5,8 @@
 function jsonp(link) {
   const sc = document.createElement('script');
   sc.src = `${link}&_=${+new Date}`;
-  document.body.appendChild(sc);
+  sc.className = 'jsonp';
+  document.body.appendChild(sc).parentNode.removeChild(sc);
 }
 /**
  * 获取ID
